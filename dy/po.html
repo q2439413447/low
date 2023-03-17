@@ -89,6 +89,19 @@
         flex-grow: 1;
     }
     </style>
+     <style>
+
+        @media(min-width:0px) and (min-width:768px)  {
+             .div{width: 100px;height: 100px;background-color: red;}
+        }
+        /* 小屏幕手机 */
+         @media(min-width:768px) and (max-width:992px){
+             .div{width: 300px;height: 300px;background-color: #01af63;}
+         }
+         @media(min-width:992px){
+             .div{width: 500px;height: 500px;background-color: bisque;}
+         }
+       </style>
 </head>
 <body>
     <div id="d1"> 
@@ -194,5 +207,6 @@
         <span id="s2">第八期会员版 秦昊陈卓璇追...</span>
      </div>
      </div>
+
 </body>
 </html>
