@@ -11,67 +11,61 @@
          cursor: pointer;
     }
     #q2:hover{
-         color: aqua;
+         color: rgb(0, 255, 119);
     }
     #d1{
          text-align: center;
          border: 1px solid;
          background-color: black;
          height: 50px;
-         margin: 0 auto;
+         width: 1200px;
          line-height: 50px;
-         width: auto;
     }
     #d2{ 
          margin: 0 auto;
          line-height: 130px;
-         width: 1000px;;
+         width: 1200px;;
          position: absolute;
          overflow: hidden;
-         
         }
    #d2 img{
-      position: relative;
       background-size: 100% 10%; 
       margin: 0 auto;
      }
+
    #d3{  
      width: 1200px;
      height: 500px; 
-     position: absolute;
      overflow: hidden;
-     column-count: 2;
-    }
-   #d3 img{
-     position: relative; 
-
+     column-count: 2; 
     }
     #d10{
      width: 1200px;
-     height: auto;
+     height: 50px;
      background-color: #e7e7e7;
-     margin: 0xp auto;
-     text-align: center;
-     border-top: 1px solid black;position: fixed;bottom: 0;
+     border: 1px solid black;
+     position: fixed;
+     bottom: 0;
      }
     #t1{
          width: 1300px;
     }
     #t2{ 
-         width: 500px;
+         width: 80%;
          height: 300px;
          transform: translatex(90px);
     }
     #t3{ 
-         width: 500px;
+         width: 80%;
          height: 300px;
          transform: translatex(40px);
     }
     #z1{  
-         font-size: 4px;text-align: right;
+         font-size: 4px;
+         text-align: right;
       }
    #z2{
-          text-align: right;
+         text-align: right;
          transform: translatey(20px);
     }
    #z3{
@@ -79,7 +73,7 @@
          text-align: right;
          transform: translateX(-60px);
     }
-       .text{
+    .text{
                display: inline-block;
                border: 0;
                width: 260px;
@@ -88,7 +82,7 @@
                outline: none; 
                border: 1px solid #01af63;
            }
-       .search {
+    .search {
                width:90px;
                height: 38px;
                border: 0;
@@ -102,20 +96,21 @@
     </style>
     <style>
 
-     @media(min-width:0px) and (min-width:768px)  {
+     @media(min-width:0px)and(min-width:768px)  {
           .div{width: 100px;height: 100px;background-color: red;}
      }
      /* 小屏幕手机 */
       @media(min-width:768px) and (max-width:992px){
           .div{width: 300px;height: 300px;background-color: #01af63;}
       }
+      /* 中屏幕手机 */
       @media(min-width:992px){
           .div{width: 500px;height: 500px;background-color: bisque;}
       }
+      /* 大屏幕手机 */
     </style>
 </head>
 <body>
-
     <div id="d1">
     <a href="" id="q2">博客首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="" id="q2">个人简介</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
