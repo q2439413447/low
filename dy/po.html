@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+     h2 a{
+        text-decoration: none;color: darkslategrey;
+    }
      #d1{
         text-align: right;
         border:1px solid black ;
@@ -19,9 +22,25 @@
          letter-spacing: 4px;
     }
      #d2 img{
-         width:100%;
-         height: 500px;position: relative;overflow: hidden;
+         width: 1200px;
+         height: 500px;
+         float: left;
         }
+    #d2{
+        animation: 9s dddd infinite;
+        display: flex;
+        animation-delay: 3s;
+    }
+    /* 主页的自动播放 */
+    #a1{
+        overflow: hidden;
+        display: flex;
+    }
+    @keyframes  dddd{
+        0%{}
+        50%{transform: translate(-1200px);}
+        100%{transform: translate(-2400px);}
+    } 
     #d3{
          width:100%;
          height: 300px;
@@ -89,19 +108,6 @@
         flex-grow: 1;
     }
     </style>
-     <style>
-
-        @media(min-width:0px) and (min-width:768px)  {
-             .div{width: 100px;height: 100px;background-color: red;}
-        }
-        /* 小屏幕手机 */
-         @media(min-width:768px) and (max-width:992px){
-             .div{width: 300px;height: 300px;background-color: #01af63;}
-         }
-         @media(min-width:992px){
-             .div{width: 500px;height: 500px;background-color: bisque;}
-         }
-       </style>
 </head>
 <body>
     <div id="d1"> 
@@ -112,14 +118,16 @@
      <a href=""><span>纪录片</span></a>
      <a href=""><span>注册/登录</span></a>
     </div>
-   <div id="d2">   
+    <div id="a1">
+     <div id="d2"> 
       <img src="t1.jpg">
-      <!-- <img src="">
-      <img src="">
-      <img src=""> -->
+      <img src="l1.jpg">
+      <img src="l2.jpg">
    </div>
-    <h2> &nbsp;&nbsp;&nbsp;电视剧<span id="s3">&nbsp;内地 |自制剧 |网络剧 | 迷雾剧场 | 恋恋剧场 | 更多</span> </h2>
-   <div id="d3"> 
+  </div>
+   <h2> &nbsp;&nbsp;&nbsp;<a href="">电视剧
+    <span id="s3">&nbsp;内地 |自制剧 |网络剧 | 迷雾剧场 | 恋恋剧场 | 更多</span> </h2></a> 
+    <div id="d3"> 
     <div id="d4">
         <img src="t2.jpg"><br>
         <a href=""><span id="s1">开端</span></a><br>
@@ -151,7 +159,10 @@
         <span id="s2">杨迪迪丽热巴公谱浪漫爱情</span>
     </div>
    </div>
-   <h2>&nbsp;&nbsp;&nbsp; 电影<span id="s3">&nbsp;文艺院线 | 独播专区 | 网络电影 | 云上北影节 | 更多></span></h2>
+  <h2>&nbsp;&nbsp;&nbsp;  <a href="">电影
+    <span id="s3">&nbsp;
+        文艺院线 | 独播专区 | 网络电影 | 云上北影节 | 更多></span>
+    </a></h2>
    <div id="d5">
       <div id="d6">
         <img src="t8.jpg"><br>
@@ -184,7 +195,9 @@
         <span id="s2">宋佳 王阳夫妻离心？</span>
       </div>
    </div >
-  <h2>  &nbsp;&nbsp;&nbsp;综艺<span id="s3">&nbsp; 哈哈哈哈哈第三季 | 种地吧 | 我们的民谣 | 我们的客栈 | 最强大脑第十季 |</span></h2>
+  <h2>  &nbsp;&nbsp;&nbsp;<a href="">综艺
+    <span id="s3">&nbsp; 哈哈哈哈哈第三季 | 种地吧 | 我们的民谣 | 我们的客栈 | 最强大脑第十季 |
+    </span></a></h2>
    <div id="d8">
      <div id="d7">
         <img src="t15.jpg" ><br>
