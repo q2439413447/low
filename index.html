@@ -1,111 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width=device-width, initial-scale=1.0">
-    <title>个人作品</title>
-    <style>
-    #q2{
-         text-decoration: none;
-         cursor: pointer;
-    }
-    #q2:hover{
-         color: rgb(0, 255, 119);
-    }
-    #d1{
-         text-align: center;
-         border: 1px solid;
-         background-color: black;
-         height: 50px;
-         width: 1200px;
-         line-height: 50px;
-         margin: auto;
-    }
-    #d2{ 
-         margin:  auto;
-         height: 100px;
-         width: 1200px;
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+        body{
+          background: -webkit-linear-gradient(left bottom,rgb(0, 255, 213),rgb(255, 0, 136),rgb(0, 195, 255));
+          animation: zi 15s infinite both linear;
+          background-size: 300% 300%;
+     }
+        @keyframes zi{
+          0%{
+               background-position: 300% 300%;
+          }
+          33%{
+               background-position: 0%  300%;
+          }
+          66%{
+               background-position: 300%  0%;
+          }
+          100%{
+               background-position: 300%  300%;
+          }
         }
-
-   #d3{  
-     width: 1200px;
-     height: 500px; 
-     overflow: hidden;
-     column-count: 2; 
-     margin: auto;
-    }
-   /* #d10{  
-     border: 1px solid black;
-     width: 1200;
-     height: 300px;
-     line-height: 300px;
-   } */
-
-
-    #t1{
-         width: 1300px;
-    }
-    #t2{ 
-         width: 80%;
-         height: 300px;
-         transform: translatex(90px);
-    }
-    #t3{ 
-         width: 80%;
-         height: 300px;
-         transform: translatex(40px);
-    }
-    
-    .text{
-               display: inline-block;
-               border: 0;
-               width: 260px;
-               height: 35px;
-               font-size: 14px;
-               outline: none; 
-               border: 1px solid #01af63;
-           }
-    .search {
-               width:90px;
-               height: 38px;
-               border: 0;
-               outline: none;
-               cursor: pointer;
-               text-align: center;
-               line-height: 35px;
-               background-color: #01af63; 
-               color: #ffffff;
-          } 
-    </style>
+        #pao1{
+          z-index: -1;
+          position: absolute;
+          top: 600px;
+          left: 50px;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background-image: radial-gradient(at 20px 20px,white 0%,#f0ccd5 25%,#5a93cb 45%,#cf3ebe 100% );
+          box-shadow: 0px 0px 8px 0px pink;
+          animation: run 3s linear infinite;
+          animation-delay: -1s;
+        }
+        #pao2{
+          z-index: -1;
+          position: absolute;
+          top: 600px;
+          left: 400px;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          box-shadow: 0px 0px 14px 0px pink;
+          background-image: radial-gradient(at 20px 20px,white 0%,#f9acbe 25%,#7da0c3 45%,#c754ba 100%);
+          animation: run 3s linear infinite;
+          animation-delay: -1.5s;
+        }
+        #pao3{
+          z-index: -1;
+          position: absolute;
+          top: 600px;
+          left: 600px;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          box-shadow: 0px 4px 8px 0px pink;
+          background-image: radial-gradient(at 20px 20px,white 0%,#f9acbe 25%,#7da0c3 45%,#c754ba 100%);
+          animation: run 3s linear infinite;
+          animation-delay: -2.5s;
+        }
+        #pao4{
+          z-index: -1;
+          position: absolute;
+          top: 600px;
+          left: 800px;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          background-image: radial-gradient(at 20px 20px,white 0%,#f9acbe 25%,#7da0c3 45%,#c754ba 100%);
+          box-shadow: 0px 0px 6px 0px pink;
+          animation: run 3s linear infinite;
+          animation-delay: -2s;
+        }
+        #pao5{
+          position: absolute;
+          top: 600px;
+          width: 120px;
+          height: 120px;
+          left: 1200px;
+          border-radius: 50%;
+          background-image: radial-gradient(at 20px 20px,white 0%,#f0ccd5 25%,#5a93cb 45%,#cf3ebe 100% );
+          box-shadow: 0px 0px 16px 0px pink;
+          animation: run 3s linear infinite;
+          animation-delay: -0.5s;
+        }
+        @keyframes run{
+          0%{transform: translate(0px,400px);}
+          100%{transform: translate(0px,-1500px);}
+        }
+      #d1{
+          text-align: right;
+      }
+      #d1 s2{
+          font-size: 20px;
+          color: blue;
+      }
+      #d1 a{
+          text-decoration: none;
+      }
+      #d1 a:hover{color: blanchedalmond;}
+     #d2{
+          width: 1200px;
+          height: 600px;
+          line-height: 600px;
+          margin: auto;
+          text-align: center;
+     }
+     #s2{
+          font-family: 楷体;
+     }
+     #s3{ 
+          font-family:楷体;
+          font-size: 50px;
+          position: absolute;
+          transform: translate(-200px);
+     }
+     #s4{ 
+          position: absolute;
+          transform: translatey(100px);
+          font-family: 楷体;
+     }
+     </style>
 </head>
 <body>
-     <div>
-    <div id="d1">
-    <a href="" id="q2">博客首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="" id="q2">个人简介</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="dy\po.html" id="q2">小程序作品</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="zp/tcs.html" id="q2">小游戏作品</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <div id="d1">
+          <span id="s2"><a href="http://www.baidu.com">搜索</a></span>&nbsp;&nbsp;&nbsp;
+          <span id="s2"><a href="">首页</a></span>&nbsp;&nbsp;&nbsp;
+          <span id="s2"><a href="dy\po.html">仿aqy页面</a></span>&nbsp;&nbsp;&nbsp;
+          <span id="s2"><a href="zp\tcs.html">小游戏作品</a></span>&nbsp;&nbsp;&nbsp;
      </div>
-       <form target="_blank" method="get" action="https://www.baidu.com/s" id="d1"> 
-        <input type="text" placeholder="请输入关键词" name="word" class="text" >
-        <input type="submit" value="搜索" class="search">
-       </form>
-   
-       <div id="d2">
-              <img src="zp/m1.jpg" id="t1">
-           </div>      <br><br><br><br><br>
+     <div id="d2">
+          <span id="s3">唐俊杰的交友网站</span>
+          <span id="s4">时间既不黑也不白，而是一到极致的灰</span>
+     </div>
+    
      <div id="d3">
-              <img src="zp/m2.jpg" id="t2">  
-              <img src="zp/m3.jpg" id="t3">
-      </div> 
-   
- </div>
-<!-- 
-    <div id="d10">
-        <p>还在持续更新，有需要请联系我们</p>
-         邮箱:2439413447@qq.com 
-         <p>QQ:2439413447 -->
+    
 
+
+     </div>
+
+
+
+
+
+
+
+
+
+
+     <div id="pao1"></div>
+     <div id="pao2"></div>
+     <div id="pao3"></div>
+     <div id="pao4"></div>
+     <div id="pao5"></div>
 </body>
 </html>
