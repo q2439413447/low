@@ -10,7 +10,7 @@
           background: -webkit-linear-gradient(left bottom,rgb(0, 255, 213),rgb(255, 0, 136),rgb(0, 195, 255));
           animation: zi 15s infinite both linear;
           background-size: 300% 300%;
-     }
+      }
         @keyframes zi{
           0%{
                background-position: 300% 300%;
@@ -103,7 +103,9 @@
       #d1 a{
           text-decoration: none;
       }
-      #d1 a:hover{color: blanchedalmond;}
+      #d1 a:hover{
+          color: blanchedalmond;
+     }
      #d2{
           width: 1200px;
           height: 600px;
@@ -119,6 +121,7 @@
      }
      #s2{
           font-family: 楷体;
+          font-size: 30px;
      }
      #s3{ 
           font-family:楷体;
@@ -136,6 +139,11 @@
           border: 1px solid black;
           background-color: azure;
           position: relative;
+          columns: 100px 2;
+     }
+     #d5 img:hover{
+          box-shadow: 0px 8px 8px 0 grey;
+          transform: translate(0,-10px);
      }
      #d6 {
           width: 750px;
@@ -144,6 +152,11 @@
           border: 1px solid black;
           background-color: azure;
           text-align: right;
+          columns:100px 2 ;
+     }
+     #d6 img:hover{
+          box-shadow: 0px 8px 8px 0 grey;
+          transform: translate(0,-10px);
      }
      #d7{
           width: 750px;
@@ -151,6 +164,11 @@
           margin: auto;
           border: 1px solid black;
           background-color: azure;
+          columns: 100px 2;
+     }
+     #d7 img:hover{
+          box-shadow: 0px 8px 8px 0 grey;
+          transform: translate(0,-10px);
      }
      #d8{
           width: 750px;
@@ -159,6 +177,11 @@
           border: 1px solid black;
           background-color: azure;
           text-align: right;
+          columns:100px 2 ;
+     }
+     #d8 img:hover{
+          box-shadow: 0px 8px 8px 0 grey;
+          transform: translate(0,-10px);
      }
      #d9{
           width: 750px;
@@ -166,9 +189,19 @@
           margin: auto;
           border: 1px solid black;
           background-color: azure;
+          columns: 100px 2;
      }
-
-
+     #d9 img:hover{
+          box-shadow: 0px 8px 8px 0 grey;
+          transform: translate(0,-10px);
+     }
+    #s5{
+     font-size: 30px;
+    }
+   #s6{
+     font-size: 10px;
+     color: darkgrey;
+   }
      </style>
 </head>
 <body>
@@ -184,23 +217,31 @@
      </div>
       
       <div id="d5">
-            <img src="zp\m8.jpg" width="350px" height="250px">
+          <a href=""><img src="zp\m8.jpg" width="350px" height="250px"></a>
+          <center><span id="s5"> <a href=""><br>风景</a></span><br>
+          <span id="s6"> 发布于2023~至今 | 风景 | 发布于z条评论</span><br>
+          <span id="s7"> 各个城市的优美风景酷酷酷酷酷酷酷酷酷酷看看看看</span>
+          </center>
       </div>
     <br>
-     <div id="d6">
+     <div id="d6"><center>
+            <span>1</span>
+            </center>
             <img src="zp\m7.jpg" width="350px" height="250px">
-      </div>
+      </div><br>
     <div id="d7">
-            <img src="zp\m6.jpg" width="350px" height="250px">
+            <img src="zp\m6.jpg" width="350px" height="250px"><center>
             <span></span>
-      </div>
-    <div id="d8">
-            <img src="zp\m5.jpg" width="350px" height="250px">
-            <span></span>
-      </div>
+          </center>
+      </div><br>
+    <div id="d8"><center>
+            <span>1</span>
+            </center><img src="zp\m5.jpg" width="350px" height="250px">
+      </div><br>
     <div id="d9">
-            <img src="zp\m4.jpg" width="350px" height="250px">
+            <img src="zp\m4.jpg" width="350px" height="250px"><center>
             <span></span>
+          </center>
       </div>
 
 
