@@ -6,94 +6,16 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
      <style>
-      body{
-          background-color: #5a93cb;
-          /* background: -webkit-linear-gradient(left bottom,rgb(0, 255, 213),rgb(255, 0, 136),rgb(0, 195, 255)); */
-          animation: zi 15s infinite both linear;
-          background-size: 300% 300%;
+      *{
+        margin: 0;
+        padding: 0;
+       }
+     #canvas{
+      position: fixed;
+      background:black;
+      overflow: auto;
+      z-index: -1; 
       }
-        @keyframes zi{
-          0%{
-               background-position: 300% 300%;
-          }
-          33%{
-               background-position: 0%  300%;
-          }
-          66%{
-               background-position: 300%  0%;
-          }
-          100%{
-               background-position: 300%  300%;
-          }
-        }
-        #pao1{
-          z-index: -1;
-          position: absolute;
-          top: 600px;
-          left: 50px;
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          background-image: radial-gradient(at 20px 20px,white 0%,#f0ccd5 25%,#5a93cb 45%,#cf3ebe 100% );
-          box-shadow: 0px 0px 8px 0px pink;
-          animation: run 3s linear infinite;
-          animation-delay: -1s;
-        }
-        #pao2{
-          z-index: -1;
-          position: absolute;
-          top: 600px;
-          left: 400px;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          box-shadow: 0px 0px 14px 0px pink;
-          background-image: radial-gradient(at 20px 20px,white 0%,#f9acbe 25%,#7da0c3 45%,#c754ba 100%);
-          animation: run 3s linear infinite;
-          animation-delay: -1.5s;
-        }
-        #pao3{
-          z-index: -1;
-          position: absolute;
-          top: 600px;
-          left: 600px;
-          width: 25px;
-          height: 25px;
-          border-radius: 50%;
-          box-shadow: 0px 4px 8px 0px pink;
-          background-image: radial-gradient(at 20px 20px,white 0%,#f9acbe 25%,#7da0c3 45%,#c754ba 100%);
-          animation: run 3s linear infinite;
-          animation-delay: -2.5s;
-        }
-        #pao4{
-          z-index: -1;
-          position: absolute;
-          top: 600px;
-          left: 800px;
-          width: 70px;
-          height: 70px;
-          border-radius: 50%;
-          background-image: radial-gradient(at 20px 20px,white 0%,#f9acbe 25%,#7da0c3 45%,#c754ba 100%);
-          box-shadow: 0px 0px 6px 0px pink;
-          animation: run 3s linear infinite;
-          animation-delay: -2s;
-        }
-        #pao5{
-          position: absolute;
-          top: 600px;
-          width: 120px;
-          height: 120px;
-          left: 1200px;
-          border-radius: 50%;
-          background-image: radial-gradient(at 20px 20px,white 0%,#f0ccd5 25%,#5a93cb 45%,#cf3ebe 100% );
-          box-shadow: 0px 0px 16px 0px pink;
-          animation: run 3s linear infinite;
-          animation-delay: -0.5s;
-        }
-        @keyframes run{
-          0%{transform: translate(0px,400px);}
-          100%{transform: translate(0px,-1500px);}
-        }
       #d1{
           text-align: right;
       }
@@ -102,6 +24,7 @@
       }
       #d1 a{
           text-decoration: none;
+          color: aqua;
       }
       #d1 a:hover{
           color: blanchedalmond;
@@ -122,15 +45,18 @@
      #s2{
           font-family: 楷体;
           font-size: 25px;
+          color: cornsilk;
      }
      #s3{ 
           font-family:楷体;
           font-size: 50px;
+          color: white;
 
      }
      #s4{ 
           font-family: 楷体;
           font-size: 30px;
+          color: white;
      }
      #d5 {
           width: 750px;
@@ -205,6 +131,117 @@
      </style>
 </head>
 <body>
+     <canvas id="canvas"></canvas>
+     <script>
+         window.requestAnimationFrame = (function(){
+             return window.requestAnimationFrame ||
+                    window.webkitRequestAnimationFrame ||
+                    window.mozRequestAnimationFrame ||
+                    function( callback ){
+                         window.setTimeout( callback, 1000/2 );
+                    };
+         })();
+         var myCanvas = document.getElementById("canvas");
+         var ctx = myCanvas.getContext("2d");//getContext 设置画笔
+         var num;
+         var w,h;
+         var duixiang = [];
+         var move = {};
+         function widthheight(){
+             w = myCanvas.width = window.innerWidth;
+             h = myCanvas.height = window.innerHeight;
+       num= Math.floor(w*h*0.00005);//点的数量。根据屏幕大小确定
+             for(var i = 0;i < num;i++){
+                 duixiang[i] = {
+                     x:Math.random()*w,
+                     y:Math.random()*h,
+                     cX:Math.random()*0.6-0.3,
+                     cY:Math.random()*0.6-0.3,
+         R:Math.floor(Math.random()*5)+2,
+         //CC:Math.floor(Math.random()*3)+2,
+            r: Math.floor(Math.random() * 254),   
+                     g: Math.floor(Math.random() * 254),  
+                     b:Math.floor(Math.random() * 254)   
+                 } 
+                // console.log(duixiang[i])
+                 Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+         //Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].CC);
+             }
+         };widthheight();//获取浏览器的等宽度等高
+      
+         function Cricle(x,y,R,r,g,b){
+             ctx.save();//保存路径
+            if(Math.random()>0.991) {ctx.globalAlpha= 0.9;}//ctx.fillStyle = "#CCC";}//填充的背景颜色
+          else { ctx.globalAlpha=0.47;}
+        
+       ctx.fillStyle = "rgb("+ r +","+ g +","+ b +")";
+             ctx.beginPath();//开始绘画
+       ctx.arc(x,y,R,Math.PI*2,0);//绘画圆 x y 半径（大小） 角度  一个PI 是180 * 2 = 360    真假 0/1 true/false
+             ctx.closePath();//结束绘画
+             ctx.fill();//填充背景颜色
+             ctx.restore();//回复路径
+         };Cricle();
+      
+      
+         !function draw(){
+             ctx.clearRect(0,0,w,h)//先清除画布上的点
+             for(var i = 0;i < num;i++){
+                 duixiang[i].x += duixiang[i].cX;
+                 duixiang[i].y += duixiang[i].cY;
+                 if(duixiang[i].x>w || duixiang[i].x<0){
+                     duixiang[i].cX = -duixiang[i].cX;
+                 }
+                 if(duixiang[i].y>h || duixiang[i].y<0){
+                     duixiang[i].cY = -duixiang[i].cY;
+                 }
+                 Cricle(duixiang[i].x,duixiang[i].y,duixiang[i].R,duixiang[i].r,duixiang[i].g,duixiang[i].b);
+                 //勾股定理判断两点是否连线
+                 for(var j = i + 1;j < num;j++){
+                     if( (duixiang[i].x-duixiang[j].x)*(duixiang[i].x-duixiang[j].x)+(duixiang[i].y-duixiang[j].y)*(duixiang[i].y-duixiang[j].y) <= 55*55 ){
+                         line(duixiang[i].x,duixiang[i].y,duixiang[j].x,duixiang[j].y,0,i,j)
+                     }
+                     if(move.x){
+                         if( (duixiang[i].x-move.x)*(duixiang[i].x-move.x)+(duixiang[i].y-move.y)*(duixiang[i].y-move.y) <= 100*100 ){
+                             line(duixiang[i].x,duixiang[i].y,move.x,move.y,1,i,1)
+                         }
+                     }
+                 }
+             }
+             window.requestAnimationFrame(draw)
+         }();
+      
+         //绘制线条
+         function line(x1,y1,x2,y2,flag,i,j){
+             
+       if (flag){var color = ctx.createLinearGradient(x1,y1,x2,y2);
+          ctx.globalAlpha=0.5;
+          color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+          color.addColorStop(0.8,"#019ee5");
+               }
+         else
+         {
+         
+         var color = ctx.createLinearGradient(x1,y1,x2,y2);
+          ctx.globalAlpha=0.9;
+          color.addColorStop(0,"rgb("+ duixiang[i].r +","+ duixiang[i].g +","+ duixiang[i].b +")");
+          color.addColorStop(1,"rgb("+ duixiang[j].r +","+ duixiang[j].g +","+ duixiang[j].b +")");
+         }
+             ctx.save();
+             ctx.strokeStyle = color;
+       ctx.lineWidth = 0.5;
+             ctx.beginPath();
+             ctx.moveTo(x1,y1);
+             ctx.lineTo(x2,y2);
+             ctx.stroke();
+             //ctx.restore();
+         }
+      
+         console.log(move)
+      
+         window.onresize = function(){
+             location.reload();
+         }
+     </script>
      <div id="d1">
           <span id="s2"><a href="http://www.baidu.com">搜索</a></span>&nbsp;&nbsp;&nbsp;
           <span id="s2" ><a href="">首页</a></span>&nbsp;&nbsp;&nbsp;
@@ -214,9 +251,24 @@
      </div>
      <div id="d2">
            <div id="d3"><span id="s3">小Q的第一个网站</span></div>
-           <div id="d4"><span id="s4">时间既不黑也不白，而是一道极致的灰</span></div>
+           <div id="d4"><span id="s4"></span></div>
      </div>
-      
+       <script>
+          var i=0;
+          var  str = "时间既不黑也不白，而是一道极致的灰";
+          window.onload=function typing(){
+
+          
+          var mydiv=document.getElementById("s4")
+          mydiv.innerHTML+=str.charAt(i);
+          i++;
+          var id=setTimeout(typing,80);
+          if(i==str.length){
+               clearTimeout(id)
+          }
+}
+
+       </script>
       <div id="d5">
           <a href=""><img src="zp\m8.jpg" width="350px" height="250px"></a>
           <center><span id="s5"> <a href=""><br>风景</a></span><br>
@@ -245,17 +297,5 @@
           </center>
       </div>
 
-
-
-
-
-
-
-
-     <div id="pao1"></div>
-     <div id="pao2"></div>
-     <div id="pao3"></div>
-     <div id="pao4"></div>
-     <div id="pao5"></div>
 </body>
 </html>
