@@ -5,6 +5,7 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
+     <link rel="stylesheet" href="text/css" href="./index.css">
      <style>
       *{
         margin: 0;
@@ -24,7 +25,7 @@
       }
       #d1 a{
           text-decoration: none;
-          color: aqua;
+          color: rgb(28, 194, 194);
       }
       #d1 a:hover{
           color: blanchedalmond;
@@ -38,6 +39,7 @@
      }
      #d3{
           transform: translatey(200px);
+        
      }
      #d4{
           transform: translatey(240px);
@@ -45,18 +47,20 @@
      #s2{
           font-family: 楷体;
           font-size: 25px;
-          color: cornsilk;
+          color:aquamarine;
+          box-shadow:  0 0 8px 8px rgb(48, 87, 102), 0 0 8px 8px rgb(30, 43, 56) inset;
      }
      #s3{ 
           font-family:楷体;
           font-size: 50px;
-          color: white;
+          color: white;  
 
      }
      #s4{ 
           font-family: 楷体;
           font-size: 30px;
-          color: white;
+          color: bisque;
+          box-shadow:  0 0 8px 8px rgb(30, 48, 55), 0 0 8px 8px rgb(38, 71, 42) inset;
      }
      #d5 {
           width: 750px;
@@ -66,6 +70,9 @@
           background-color: azure;
           position: relative;
           columns: 100px 2;
+     }
+     #d5 img{
+          float: left;
      }
      #d5 img:hover{
           box-shadow: 0px 8px 8px 0 grey;
@@ -84,6 +91,9 @@
           box-shadow: 0px 8px 8px 0 grey;
           transform: translate(0,-10px);
      }
+     #d6 img{
+          float:right;
+     }
      #d7{
           width: 750px;
           height: 250px;
@@ -91,6 +101,9 @@
           border: 1px solid black;
           background-color: azure;
           columns: 100px 2;
+     }
+     #d7 img{
+          float: left;
      }
      #d7 img:hover{
           box-shadow: 0px 8px 8px 0 grey;
@@ -105,6 +118,9 @@
           text-align: right;
           columns:100px 2 ;
      }
+     #d8 img{
+          float: right;
+     }
      #d8 img:hover{
           box-shadow: 0px 8px 8px 0 grey;
           transform: translate(0,-10px);
@@ -117,17 +133,34 @@
           background-color: azure;
           columns: 100px 2;
      }
+     #d9 img{
+          float: left;
+     }
      #d9 img:hover{
           box-shadow: 0px 8px 8px 0 grey;
           transform: translate(0,-10px);
      }
-    #s5{
-     font-size: 30px;
-    }
-   #s6{
-     font-size: 10px;
-     color: darkgrey;
-   }
+
+     
+     #s5{
+            font-size: 30px;
+            color: rgb(53, 122, 134);
+            float: left;
+       }
+     #s5 a{
+            text-decoration: none;
+            color: rgb(53, 122, 134);
+       }
+     #s6{
+            font-size: 10px;
+            color: darkgrey;
+            float: left;
+     }
+     #s7{
+          text-align: left;
+          float: left;
+          font-size: 10px;
+     }
      </style>
 </head>
 <body>
@@ -138,7 +171,7 @@
                     window.webkitRequestAnimationFrame ||
                     window.mozRequestAnimationFrame ||
                     function( callback ){
-                         window.setTimeout( callback, 1000/2 );
+                      window.setTimeout( callback, 1000/2 );
                     };
          })();
          var myCanvas = document.getElementById("canvas");
@@ -150,7 +183,7 @@
          function widthheight(){
              w = myCanvas.width = window.innerWidth;
              h = myCanvas.height = window.innerHeight;
-       num= Math.floor(w*h*0.00005);//点的数量。根据屏幕大小确定
+       num= Math.floor(w*h*0.00004);//点的数量。根据屏幕大小确定
              for(var i = 0;i < num;i++){
                  duixiang[i] = {
                      x:Math.random()*w,
@@ -265,37 +298,50 @@
           var id=setTimeout(typing,80);
           if(i==str.length){
                clearTimeout(id)
-          }
-}
-
+          }}
        </script>
+
       <div id="d5">
           <a href=""><img src="zp\m8.jpg" width="350px" height="250px"></a>
-          <center><span id="s5"> <a href=""><br>风景</a></span><br>
-          <span id="s6"> 发布于2023~至今 | 风景 | 发布于z条评论</span><br>
-          <span id="s7"> 各个城市的优美风景酷酷酷酷酷酷酷酷酷酷看看看看</span>
+          <center><span id="s5"> <a href=""><br>手写Promise</a></span>
+          <span id="s6"> <br>发布于2023.03.28 | web前端 | 发布于0条评论</span>
+          <span id="s7"><br>/** * @description MyPromise * @author TsingYi */
+            class MyPromise state = 'pending' //状...
+          </span>
           </center>
       </div>
     <br>
      <div id="d6"><center>
-            <span>1</span>
-            </center>
+            <span id="s5"> <a href=""><br>Vue中hash路由和history路由原理及优缺点</a></span>
+            <span id="s6"><br>&nbsp;&nbsp;&nbsp;发布于2022.06.28 | web前端 | 发布于0条评论</span>
+            <span id="s7"><br>&nbsp;&nbsp;&nbsp;hash模式: 原理: 在 url 中的 #
+                之后对应的是 hash 值, 其原理是通过window.onhashChange() 事件监听hash值...</span>
             <img src="zp\m7.jpg" width="350px" height="250px">
       </div><br>
     <div id="d7">
             <img src="zp\m6.jpg" width="350px" height="250px"><center>
-            <span></span>
+            <span id="s5"> <a href=""><br>Node.js,</a></span>
+            <span id="s6"><br>&nbsp;&nbsp;&nbsp;发布于2023.02.21 | web前端 | 发布于0条评论</span>
+            <span id="s7"><br>&nbsp;&nbsp;&nbsp;文章转载自 Kerwin,如有侵权，请联系作者，本站仅当学
+               习使用。 一、Node.js基础1. 认识Node.js Node.js,...</span>
           </center>
       </div><br>
     <div id="d8"><center>
-            <span>1</span>
+            <span id="s5"> <a href=""><br>手写bind,apply,call</a></span>
+            <span id="s6"><br>&nbsp;&nbsp;&nbsp;发布于2023.03.21 | web前端 | 发布于0条评论</span>
+            <span id="s7"><br>&nbsp;&nbsp;&nbsp;手写bind,apply,call apply,call,bind都是js给函数内
+               置的一些api,调用他们可以为函数指定this的执行,同时也可以传参. 使用
+               方式//callfun.callthisArg, arg1, arg2,...</span>
             </center><img src="zp\m5.jpg" width="350px" height="250px">
       </div><br>
     <div id="d9">
             <img src="zp\m4.jpg" width="350px" height="250px"><center>
-            <span></span>
+            <span id="s5"> <a href=""><br>vue引入网络图片跨域问题</a></span>
+            <span id="s6"><br>&nbsp;&nbsp;&nbsp;发布于2023.1.21 | web前端 | 发布于0条评论</span>
+            <span id="s7"><br>&nbsp;&nbsp;&nbsp;vue请求网络接口中图片报错403解决办法造成原因:网络
+               接口都是有请求限制的，特别是图片字段值是绝对路径...</span>
           </center>
       </div>
-
+    <br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
